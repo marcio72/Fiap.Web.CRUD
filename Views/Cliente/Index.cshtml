@@ -1,0 +1,67 @@
+﻿ @model IEnumerable<ClienteModel> 
+
+
+
+<div class="my-8  px-4">
+    <h2>Listagem de Clientes</h2>
+
+    @if (!string.IsNullOrEmpty((String)TempData["mensagemSucesso"]))
+    {
+        <div class=" alert alert-success" role="alert">@TempData["mensagemSucesso"]</div>    
+    }
+        <p>
+            <a asp-action="Create" class="btn btn-success" asp-controller="Cliente"> Novo Cliente</a>
+        </p>
+        
+
+        <table id="resumo" class="table table-bordered border-dark">
+            <thead class="table-dark">
+                <tr id="#">
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>SobreNome</th>
+                    <th>E-mail</th>
+                    <th>Data do Cadastro</th> 
+                    <th>Observacao</th>
+                    <th>Representante</th>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                    <th> </th>
+                </tr>
+            </thead>
+
+
+            <tbody class="historico">
+            </tbody>
+
+            <tbody class="historico">
+                @foreach (var cliente in Model) { 
+                <tr>
+                        <td>@cliente.ClienteId </td>
+                        <td>@cliente.Nome </td>
+                        <td>@cliente.Sobrenome</td>
+                        <td>@cliente.Email </td>
+                        <td>@cliente.DataNascimento</td>
+                        <td>@cliente.Observacao</td>
+                        <td>@cliente.Representante.NomeRepresentante</td>
+                        <td></td>
+                        <td>
+                            
+                         <div class="d-flex justify-content-end mt-3"> </div>
+                            <td> <a asp-controller="Cliente" class="btn btn-warning" asp-action="Edit" asp-route-id="@cliente.ClienteId">Editar </a></td>
+                            <td> <a asp-controller="Cliente" class="btn btn-danger" asp-action="Delete" asp-route-id="@cliente.ClienteId">Excluir </a></td>
+                        </tr>
+                } 
+
+            </tbody>
+        </table>
+
+        <c:set var="total" value="0" />
+        <c:forEach var="lisdesp" items="${}">
+            <c:set var="total" value="${}" />
+        </c:forEach>
+    <a asp-action="Create" class="btn btn-success"  asp-controller="Cliente"> Novo Cliente</a>
+        <br>
+
+</div>

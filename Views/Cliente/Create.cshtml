@@ -1,0 +1,59 @@
+﻿@model Fiap.Web.alunosII.Models.ClienteModel
+
+<html>
+
+    <title>Cadastro Cliente</title>
+
+
+<body>
+    <h1 class="row mb-3 px-4"> Cadastro de Cliente</h1>
+
+    <form asp-action="Create" asp-controller="Cliente" class="dados">
+        <div class="row mb-3 px-4">
+
+            <div class="col-md-6 my-2">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="ex: Joao">
+            </div>
+
+            <div class="col-md-6  my-2">
+                <label for="sobrenome" class="form-label">Sobrenome</label>
+                <input type="text" class="form-control" id="sobrenome" name="sobrenome"
+                       placeholder="ex.: Junqueira">
+            </div>
+
+            <div class="col-md-4  my-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email"
+                       placeholder="ex.: joaojunqueira@fintech.com">
+            </div>
+
+            <div class="col-md-4  my-3">
+                <label for="dataCadastro" class="form-label">Data Nascimento</label>
+                <input type="date" class="form-control" id="DataNascimento" name="DataNascimento">
+            </div>
+
+            <div class="col-md-4  my-3">
+                <label for="Observacao" class="form-label">Observacao</label>
+                <input type="text" class="form-control" id="Observacao" name="Observacao">
+            </div>
+            
+            <div class="col-md-4  my-3">
+                <label asp-for="RepresentanteId" class="control-label"></label>
+                <select asp-for="RepresentanteId" asp-items="@ViewBag.Representantes" class="form-select">
+                    <option value="0">Selecione</option>
+                </select>
+            </div>
+
+            <div class="col-md-12  my-1">
+                <button type="submit" value="Create" class="btn btn-success">Confirmar</button>
+                <a asp-action="index" class="btn btn-primary">Retorna</a></button>
+            </div>
+
+        
+        </div>
+      
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.Web.alunosII", "Fiap.Web.alunosII.csproj", "{4AB91EE1-4590-49E3-A88F-D20ECFCE0187}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AB91EE1-4590-49E3-A88F-D20ECFCE0187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB91EE1-4590-49E3-A88F-D20ECFCE0187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AB91EE1-4590-49E3-A88F-D20ECFCE0187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AB91EE1-4590-49E3-A88F-D20ECFCE0187}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19FB50F3-8141-459F-8636-2B704307D8B3}
+	EndGlobalSection
+EndGlobal

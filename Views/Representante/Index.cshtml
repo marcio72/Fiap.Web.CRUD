@@ -1,0 +1,39 @@
+﻿@model Fiap.Web.alunosII.Models.RepresentanteModel
+
+<html>
+
+    <title>Editar Representantes </title>
+
+
+<body>
+    <h1 class="row mb-3 px-4"> Editar</h1>
+
+    <form asp-action="Edit" asp-controller="Representante" class="dados">
+        <div class="row mb-3 px-4">
+
+            <input type="hidden" asp-for="RepresentanteId"/>
+
+            
+            <div class="col-md-6  my-2">
+                <label asp-for="NomeRepresentante" class="form-label"></label>
+                <input asp-for="NomeRepresentante" class="form-control bg-light text-success" />
+
+            </div>
+
+            <div class="col-md-6  my-2">
+                <label asp-for="Cpf" class="form-label"></label>
+                <input asp-for="Cpf" class="form-control bg-light text-success" />
+            </div>
+
+
+            <div class="col-md-12  my-1">
+                <button type="submit" value="Cadastrar" class="btn btn-success"> Confirmar </button>
+                <a asp-action="index" class="btn btn-primary"> Retorna </a></button>
+            </div>
+        
+        </div>
+      
+    </form>
+
+</body>
+</html>

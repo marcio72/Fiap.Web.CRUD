@@ -1,0 +1,62 @@
+﻿@model Fiap.Web.alunosII.Models.ClienteModel
+
+<html>
+
+    <title>Editar Cliente</title>
+
+
+<body>
+    <h1 class="row mb-3 px-4"> Editar</h1>
+
+    <form asp-action="Edit" asp-controller="Cliente" class="dados">
+        <div class="row mb-3 px-4">
+
+            <input type="hidden" asp-for="ClienteId"/>
+
+            
+            <div class="col-md-6  my-2">
+                <label asp-for="Nome" class="form-label"></label>
+                <input asp-for="Nome" class="form-control bg-light text-success" />
+
+            </div>
+
+            <div class="col-md-6  my-2">
+                <label asp-for="Sobrenome" class="form-label"></label>
+                <input asp-for="Sobrenome" class="form-control bg-light text-success" />
+
+            </div>
+
+            <div class="col-md-4  my-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control bg-light text-success" />
+            </div>
+
+            <div class="col-md-4  my-3">
+                <label asp-for="DataNascimento" class="form-label"></label>
+                <input asp-for="DataNascimento" class="form-control bg-light text-success" />
+            </div>
+
+            <div class="col-md-4  my-3">
+                <label asp-for="Observacao" class="form-label"></label>
+                <input asp-for="Observacao" class="form-control bg-light text-success" />
+            </div>
+            
+            
+            <div class="col-md-12  my-2">
+                 <label asp-for="RepresentanteId" class="control-label">Representante</label>
+                <select asp-for="RepresentanteId" asp-items="@ViewBag.Representantes" class="form-select bg-light text-success">
+                            <option value="0">Selecione</option>
+                 </select>
+            </div>
+
+            <div class="col-md-12  my-1">
+                <button type="submit" value="Cadastrar" class="btn btn-success">Confirmar</button>
+                <a asp-action="index" class="btn btn-primary">Retorna</a></button>
+            </div>
+        
+        </div>
+      
+    </form>
+
+</body>
+</html>
